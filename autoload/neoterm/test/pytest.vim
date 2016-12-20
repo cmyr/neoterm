@@ -5,7 +5,7 @@ function! neoterm#test#pytest#run(scope)
   if a:scope == 'file'
     let command .= ' ' . path
   elseif a:scope == 'all'
-    let command .= ' ./test'
+    let command .= ' ' . expand('%:h')
   endif
 
   return command
